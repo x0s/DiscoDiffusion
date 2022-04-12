@@ -60,8 +60,21 @@ $ git checkout main
 $ git merge origin/main
 ```
 
+## Launch server and start to diffuse!
+You can either edit the shortcut already defined and the bash script `godisco.bat` in directory `batch` or type the following command in Anaconda prompt (type _anaconda_ in Windows menu)
+
+```
+# Activate virtual environment
+activate disco_v5
+# Launch jupyter server to execute the script
+python -m jupyter lab Disco_Diffusion_v5.ipynb
+```
+
 ## Troubleshooting
 ```
+# If jupyter doesn't open itself automatically in the browser
+# copy-paste the provided link from CLI to browser
+
 # if Jupyter still points to python version (not the python in active env :/)
 $ conda install -c conda-forge jupyterlab --force-reinstall
 
