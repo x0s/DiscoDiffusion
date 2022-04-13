@@ -40,7 +40,7 @@ $ cd %CONDA_PREFIX%\envs
 $ mkdir disco_v5
 $ tar -xzf YOUR_PROJECT_PATH\DiscoDiffusion\disco_v5.tar.gz -C disco_v5
 $ activate disco_v5
-$ conda-unpack
+(disco_v5) $ conda-unpack
 ```
 
 #### 3. Pull last version of notebook from repo
@@ -48,16 +48,16 @@ $ conda-unpack
 If you don't have access internet on host machine, it's better to fetch&merge last version on host machine before packing the environment
 ```
 # Go to your project
-$ cd YOUR_PROJECT_PATH\DiscoDiffusion
+(disco_v5) $ cd YOUR_PROJECT_PATH\DiscoDiffusion
 
-$ Set your git credentials
-$ git config user.name "Your Name"
-$ git config user.email "youremail@provider.com"
+# Set your git credentials
+(disco_v5) $ git config user.name "Your Name"
+(disco_v5) $ git config user.email "youremail@provider.com"
 
 # get last version of notebook from repo
-$ git fetch origin
-$ git checkout main
-$ git merge origin/main
+(disco_v5) $ git fetch origin
+(disco_v5) $ git checkout main
+(disco_v5) $ git merge origin/main
 ```
 
 ## Launch server and start to diffuse!
@@ -65,9 +65,9 @@ You can either edit the shortcut already defined and the bash script `godisco.ba
 
 ```
 # Activate virtual environment
-activate disco_v5
+$ activate disco_v5
 # Launch jupyter server to execute the script
-python -m jupyter lab Disco_Diffusion_v5.ipynb
+(disco_v5) $ python -m jupyter lab Disco_Diffusion_v5.ipynb
 ```
 
 ## Troubleshooting
@@ -76,8 +76,8 @@ python -m jupyter lab Disco_Diffusion_v5.ipynb
 # copy-paste the provided link from CLI to browser
 
 # if Jupyter still points to python version (not the python in active env :/)
-$ conda install -c conda-forge jupyterlab --force-reinstall
+(disco_v5) $ conda install -c conda-forge jupyterlab --force-reinstall
 
 # Or without internet, use active python (in env)
-$ python -m jupyter lab
+(disco_v5) $ python -m jupyter lab
 ```
